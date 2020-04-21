@@ -26,8 +26,22 @@ const circleArea = r => {
 // ========================================================
 
 
+let shoppingCart = []
 
+const createItem = (name, price) => {
+  // Should return a JSON object
+  return { name, price, quantity: 1 }
+}
+
+const addItemToShoppingCart = item => {
+  shoppingCart.push(item)
+  console.log('Shopping cart: ')
+  console.log(shoppingCart)
+}
+
+const removeItemFromShoppingCart = () => shoppingCart.pop()
 
 module.exports = { 
-  sayHello, area, perimeter, circleArea
+  sayHello, area, perimeter, circleArea,
+  createItem, addItemToShoppingCart, shoppingCart, removeItemFromShoppingCart
 }
